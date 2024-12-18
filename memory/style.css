@@ -325,6 +325,11 @@ border: solid red 2px;*/
   transform-style: preserve-3d;
 }
 
+.fontblanc {
+  background-color: #fff;
+}
+
+
 .cardsExt:hover {
   transform: scale(1.02) rotate(2deg);
 }
