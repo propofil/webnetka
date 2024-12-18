@@ -1,0 +1,574 @@
+/*-----------------*/
+/*---memory CSS ---*/
+/*-----------------*/
+
+
+
+/* ==========================import===============================   */
+
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Roboto:wght@100;300;400&display=swap');
+/*    font-family: 'Luckiest Guy', cursive;
+      font-family: 'Roboto', sans-serif;
+*/
+
+
+/* ===========================variables==============================   */
+
+:root {
+  
+  --main-color1: hsla(180, 60%, 20%, 1); /* vert du site (header)(game-zone)(footer) */
+  --main-color2: hsla(180, 40%, 20%, 1); /* vert du titre (jeu memory) */
+  --main-color3: hsla(180, 40%, 70%, 1);/* border du titre, coleur du main */
+  --main-color4: hsla(180, 40%, 80%, 1);/*  border du main */
+  --main-color5: hsla(180, 40%, 60%, 1);/* starter et ender du main(dernier score) */
+  --main-color10: hsla(305, 10%, 80%,1);/* un rose passé */
+  --main-color11: hsla(305, 10%, 90%,1);/* + clair (centre) */
+  --main-color12: hsla(305, 80%, 30%,1);/* un rose passé */
+  --main-color13: hsla(305, 20%, 30%,1);/* un rose passé */
+
+  --mainWhite: #fff;
+  --mainBlack: #000;
+  --mainGrey: #808080;
+  --mainPink : pink;
+  
+  
+  --main-padding: 25px 10px;
+  --main-spacing: 0.5rem;
+  --main-transition: all 0.3s linear;
+}
+/* color: var(--mainBlack); */
+
+
+ /* =======================général==================================   */
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  -webkit-user-select: none; 
+  -webkit-touch-callout: none; 
+  -moz-user-select: none; 
+  -ms-user-select: none; 
+  user-select: none; 
+  /* cursor : pointer; */
+}
+
+.invisible{
+  visibility: hidden;
+}
+
+
+ /* =========================start================================   */
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}header {
+  background-color: hsla(180, 60%, 20%, 1);
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  color: #fff
+}
+
+main{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: ridge 20px hsla(180, 40%, 80%, 1);
+  background-color: hsla(180, 40%, 70%, 1);
+  color: #000;
+}
+
+footer {
+  background-color: hsla(180, 60%, 20%, 1);
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ----------------------------------------------*/
+
+.mainTitle {
+  width: 100%;
+  height: 100px;
+  background-color: hsla(180, 40%, 20%, 1);
+  border: ridge 25px hsla(180, 40%, 70%, 1);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.mainTitle h1 {
+  font-family: 'Luckiest Guy', cursive;
+  letter-spacing:  0.5rem;
+  font-size: 1.9rem;
+  background-image: linear-gradient(to bottom, yellow, red);
+  -webkit-background-clip: text;
+  /*-moz-background-clip: text;*/
+  background-clip: text;
+  color: transparent;
+  /* cursor : pointer; */
+  /* transform:scale(1.5); */
+  
+}
+.mainTitle h1:hover {
+  transition: transform 500ms ease ;
+  transform: scale(1.06);
+}
+.agitation {
+  animation: agite 1000ms ease-in-out infinite;
+}
+@keyframes agite{
+  0%{transform:scale(1);}
+  45%{transform:scale(1.1);}
+  100%{transform:scale(1);}
+}
+
+.agitation2 {
+  animation: agite2 5000ms ease-in-out infinite ;
+}
+@keyframes agite2{
+  0%{transform:scale(1);}
+  8%{transform:scale(1.4);}
+  20%{transform:scale(1);}
+  38%{transform:scale(1.3);}
+  40%{transform:scale(1);}
+  48%{transform:scale(1.27);}
+  60%{transform:scale(1);}
+  68%{transform:scale(1.15);}
+  80%{transform:scale(1);}
+  88%{transform:scale(1.1);}
+  100%{transform:scale(1);}
+}
+
+.descend {
+  animation: descend 5000ms both;
+}
+@keyframes descend{
+  0%{transform:scale(1.5);}
+  10%{transform:scale(1);}
+  20%{transform:scale(1.4);}
+  30%{transform:scale(1);}
+  40%{transform:scale(1.3);}
+  50%{transform:scale(1);}
+  60%{transform:scale(1.2);}
+  70%{transform:scale(1);}
+  80%{transform:scale(1.1);}
+  90%{transform:scale(1);}
+  100%{transform:scale(1);}
+}
+
+.mainStart, .mainEnd {
+  width: 100%;
+  height: 70px;
+  background-color: hsla(180, 40%, 60%, 1);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  }
+
+/*à virer-start*/  
+.buttonArea, .textArea, .timerArea{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsla(180, 40%, 60%, 1);
+}
+.startButton{
+    line-height: 2.5;
+    padding: 0 20px;
+    font-size: 1.3rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 10px;
+    background-color: hsla(305, 20%, 61%,1);
+    /*background-color: hsla(305, 86%, 57%,1);*/
+    box-shadow: inset 2px 2px 3px hsla(325, 11%, 33%,1),
+                inset -2px -2px 3px hsla(334, 94%, 28%,1);
+}
+.startButton:hover {
+    background-color: hsla(305, 40%, 61%,1);
+}
+.startButton:active {
+    box-shadow: inset 2px 2px 3px hsla(305, 26%, 20%,1),
+    inset -2px -2px 3px hsla(305, 40%, 61%,1);
+}
+.textArea{
+  font-size: 1.3rem;
+  text-align: center;
+}
+.timerArea{
+font-size: 2rem;
+text-align: center;
+}
+/*à virer-end*/  
+
+
+.mainGame-ext {
+  /* max-width: 1400px;
+min-width: 300px; 870
+border: solid red 2px;*/
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  position: relative;
+  /* cursor : pointer; */
+}
+
+.mainGame-messageBoard{
+  background-color : var(--main-color10);
+  box-shadow: 0px 0px 20px 5px hsla(325, 11%, 33%,1);
+  position:absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  overflow: hidden;
+  z-index: 10; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius:45px;
+}
+.messageBoardInt{
+  width: 50%;
+  height: 100%;
+  /* background-color : var(--main-color11);
+  box-shadow: 0px 0px 20px 5px hsla(325, 11%, 33%,1); */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.messageBoard{
+  font-size: 3.5vw;
+  text-align: center;
+  text-shadow: 6px 6px 10px hsla(325, 11%, 33%,1);
+}
+
+.buttons{
+  display: flex;
+  flex-direction:column;
+  justify-content: space-around;
+  width: 50%;
+  height: 100%; 
+}
+.buttons button{
+  text-align: center;
+  width:90%;
+  height: auto;
+  font-size: 3vw;
+  border-radius:40px;
+  box-shadow: 0px 0px 10px 5px hsla(325, 11%, 33%,1);
+  background-color : var(--main-color10);
+}
+.buttons button:hover{
+  box-shadow: 0px 0px 20px 5px hsla(325, 11%, 43%,1);
+}
+.buttons button:active{
+  box-shadow: 0px 0px 20px 5px hsla(325, 11%, 55%,1);
+}
+
+.mainGame-int {
+  border: solid 2px hsla(180, 60%, 20%, 1);
+  box-shadow:   inset 0px 0px 4px 4px hsla(16, 100%, 50%, 0.2);
+    /*inset 0px 0px 4px 4px hsla(305, 40%, 61%,0.4);*/
+  border-radius: 20px;
+  width: auto;
+  height: auto;
+  margin: 10px;
+  display: grid;
+  justify-content: center;
+  grid-template-rows: repeat(4, 210px);
+  grid-template-columns: repeat(4, 210px);
+  grid-gap: 10px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.cardsExt {
+  /* border: solid pink 1px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  -webkit-perspective:1000px;
+  perspective:1000px;
+  margin: 5px;
+}
+
+.cardsInt {
+  /* border: solid hsla(180, 40%, 20%, 1) 5px;
+  border-radius: 20px; */
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.6s;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.cardsExt:hover {
+  transform: scale(1.02) rotate(2deg);
+}
+
+.face, .deck{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: solid hsla(180, 40%, 20%, 1) 5px;
+  border-radius: 20px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.face{
+  font-size: 7.9rem;/*taille*/
+  text-align: center;
+  background-color: hsla(180, 40%, 90%, 1);
+  transform: rotateY(180deg);
+}
+
+.deck{
+background:radial-gradient(circle, hsla(180, 60%, 60%, 1), hsla(180, 60%, 20%, 1));
+
+}
+
+.active {
+  transform: rotateY(180deg)
+}
+
+
+/* =========================animations================================   */
+
+
+/* *** =======================    MEDIA QUARIES ================================== *** */
+
+
+
+@media all and (min-width: 2000px) {/* > à 2000ww */
+  .buttons button{
+    font-size: 1.3vw;
+  }
+  .messageBoard{
+    font-size: 2vw;
+  }
+}
+
+@media all and (min-width: 1700px) and (max-width:2000px) { /* 1700w à 2000w */
+  .buttons button{
+    font-size: 2vw;
+  }
+  .messageBoard{
+    font-size: 2.8vw;
+  }
+}
+
+@media all and (min-width:1400px) and (max-width:1700px){/* 1400w à 1700w */
+  main{
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .mainStart, .mainEnd {
+    flex-direction: column;
+  }
+  .buttonArea, .textArea, .timerArea{
+    margin: 80px auto;
+    text-align: center;
+  }
+  .startButton{
+    padding: 20px;
+  }
+  .messageBoard{
+    font-size: 3vw;
+  }
+}
+
+
+@media all and (min-width:909px) and (max-width: 1400px) {/* 909w à 1400ww */
+   /* this */
+}
+
+
+@media all and (min-width:700px) and (max-width: 909px) {/* 909w à 1400ww */
+  .mainGame-int {
+    grid-template-rows: repeat(4, 150px);
+    grid-template-columns: repeat(4,150px);
+    grid-gap: 5px;
+  }
+  .face{
+    font-size: 5.9rem;/*taille*/
+  }
+}
+
+@media all and (min-width:600px) and (max-width: 700px) {/* 909w à 1400ww */
+  .mainGame-int {
+    grid-template-rows: repeat(4, 140px);
+    grid-template-columns: repeat(4, 140px);
+    grid-gap: 3px;
+  }
+  .face{
+    font-size: 5.4rem;/*taille*/
+  }
+}
+
+
+@media all and (min-width:500px) and (max-width: 600px) {/* 909w à 1400ww */
+  .mainGame-int {
+    grid-template-rows: repeat(4, 120px);
+    grid-template-columns: repeat(4, 120px);
+    grid-gap: 5px;
+  }
+  .face{
+    font-size: 4.2rem;/*taille*/
+  }
+  header, footer {
+    height: 70px;
+  }
+  .mainStart, .mainEnd {
+    height: 50px;
+  }
+  .messageBoard{
+    font-size: 3.2vw;
+  }
+}
+
+ @media all and (min-width:400px) and (max-width: 500px) {/*600w à 909ww*/ 
+  header, footer {
+    height: 60px;
+  }
+  .mainStart, .mainEnd {
+    height: 40px;
+  }
+  .mainGame-int {
+    border: solid 1px hsla(180, 60%, 20%, 1);
+    grid-template-rows: repeat(4, 96px);
+    grid-template-columns: repeat(4, 96px);
+    grid-gap: 5px;
+    padding: 4px;
+    margin: 4px;
+  }
+  .face{
+    font-size: 3.5rem;/*taille*/
+  }
+  .face, .deck{
+    border: solid hsla(180, 40%, 20%, 1) 3px;
+    border-radius: 10px;
+  }
+  .startButton{
+    padding: 0 10px;
+    font-size: 1.2rem;
+  }
+ }
+
+
+ @media all and (min-width:300px) and (max-width: 400px) {/* 300w à 600ww */
+  header, footer {
+    height: 50px;
+  }
+  .mainTitle h1 {
+    letter-spacing:  0.3rem;
+    font-size: 1.3rem;
+  }
+  .mainStart, .mainEnd {
+    height: 30px;
+  }
+  .mainGame-int {
+    border: solid 1px hsla(180, 60%, 20%, 1);
+    grid-template-rows: repeat(4, 72px);
+    grid-template-columns: repeat(4, 72px);
+    grid-gap: 0px;
+    padding: 0px;
+    margin: 0px;
+  }
+  .face{
+    font-size: 2.4rem;/*taille*/
+  }
+  .face, .deck{
+    border: solid hsla(180, 40%, 20%, 1) 2px;
+    border-radius: 5px;
+  }
+  .startButton{
+    padding: 0 5px;
+    font-size: 1rem;
+  }
+  .textArea{
+    font-size: 1.2rem;
+  }
+  .buttons button{
+    font-size: 3vw;
+  }
+  .messageBoard{
+    font-size: 3vw;
+  }
+ }
+
+ @media all and (max-width: 300px) {/* <300w */
+  header, footer {
+    height: 40px;
+  }
+  .mainTitle h1 {
+    letter-spacing:  0.2rem;
+    font-size: 1.1rem;
+  }
+  .mainStart, .mainEnd {
+    height: 20px;
+  }
+  .mainGame-int {
+    border: solid 1px hsla(180, 60%, 20%, 1);
+    grid-template-rows: repeat(4, 65px);
+    grid-template-columns: repeat(4, 65px);
+    grid-gap: 0px;
+    padding: 0px;
+    margin: 0px;
+  }
+  .face{
+    font-size: 2.2rem;/*taille*/
+  }
+  .face, .deck{
+    border: solid hsla(180, 40%, 20%, 1) 1px;
+    border-radius: 0px;
+  }
+  .startButton{
+    padding: 0 2px;
+    font-size: 1rem;
+  }
+  .textArea{
+    font-size: 1rem;
+  }
+  .buttons button{
+    font-size: 2.6vw;
+  }
+  .messageBoard{
+    font-size: 2.6vw;
+  }
+ }
+
+
+ /* ============notes=============
+cursor : pointer;supprimé partout
+car problème sélection /surbrillance des boites (sur autre que ordi)
+  -webkit-user-select: none; 
+  -webkit-touch-callout: none; 
+  -moz-user-select: none; 
+  -ms-user-select: none; 
+  user-select: none; 
+  nécessaire du coup pour empêcher sélection du texte
+ */

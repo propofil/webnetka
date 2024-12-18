@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MEMORY</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="app.js"></script>
+  </head>
+
+  <body>
+    <!-- ***************** body ****************** -->
+
+    <!-- ============ header ============ -->
+    <header>
+      <div class="headerContExt">
+        <div class="headerContInt">
+          <p>GAME-ZONE</p>
+        </div>
+      </div>
+    </header>
+
+    <!-- ============ main ============ -->
+    
+    <div class="mainTitle">
+      <H1>Jeu :  Memory</H1>
+    </div>
+
+    <main>
+
+      <div class="mainStart invisible">
+        <div class="buttonArea">
+          <button class="startButton" autofocus>START</button>
+        </div>
+        <div class="textArea">
+          <p> Cliquez sur start pour démarrer</p>
+        </div>
+        <div class="timerArea">
+          <p>⏱️</p>
+        </div>
+        
+      </div>
+
+      <!-- __plateau de jeu __ -->
+      <div class="mainGame-ext">
+
+        <div class="mainGame-messageBoard ">
+          <div class="messageBoardInt ">
+            <p class="messageBoard agitation"><span>✨</span><span> Choisissez vos cartes </span><span>✨</span></p>
+          </div>
+          <div class="buttons ">
+            <button class="collecButton" id="collection01">🐶animal1🐷</button>
+            <button class="collecButton" id="collection02">🐱animal2🐓</button>
+            <button class="collecButton" id="collection03">🐺animal3🐍</button>
+            <button class="collecButton" id="collection04">🤪smiley😴</button>
+            <button class="collecButton" id="collection05">👹monstres👺</button>
+            <button class="collecButton" id="collection06">🌞nature🌳</button>
+            <button class="collecButton" id="collection07">🥦legumes🍆</button>
+            <button class="collecButton" id="collection08">🍇fruits🍊</button>
+            <button class="collecButton" id="collection09">🎁fete🎅</button>
+            <button class="collecButton" id="collection10">🧟fantasy🦄</button>
+          </div>
+          
+        </div>
+
+        <div class="mainGame-int"><!-- ici débute le groupe de cartes -->
+
+          <div class="cardsExt" id="cardExt1" data-id="0" data-attr="dog">
+            <div class="cardsInt">
+              <div class="face">🐶</div>
+              <div class="deck"></div>
+            </div>
+          </div>
+
+          <div class="cardsExt" id="cardExt2" data-id="1" data-attr="frog">
+            <div class="cardsInt">
+              <div class="face">🐸</div>
+              <div class="deck"></div>
+            </div>
+          </div>
+
+          <div class="cardsExt" id="cardExt3" data-id="2" data-attr="whale">
+            <div class="cardsInt" id="cardInt3">
+              <div class="face">🐳</div>
+              <div class="deck"></div>
+            </div>
+          </div>
+
+          <div class="cardsExt" id="cardExt4" data-id="3" data-attr="chicken">
+            <div class="cardsInt" id="cardInt4">
+              <div class="face">🐥</div>
+              <div class="deck"></div>
+            </div>
+          </div>
+
+          <div class="cardsExt" id="cardExt5" data-id="4" data-attr="elephant">
+            <div class="cardsInt" id="cardInt5">
+              <div class="face">🐘</div>
+              <div class="deck"></div>
+            </div>
+          </div>
+          
+          <div class="cardsExt" id="cardExt6" data-id="5" data-attr="parrot">
+            <div class="cardsInt" id="cardInt6">
+              <div class="face">🦜</div>
+              <div class="deck"></div>
+            </div>
+          </div>
+
+          <div class="cardsExt" id="cardExt7" data-id="6" data-attr="bee">
+            <div class="cardsInt" id="cardInt7">
+              <div class="face">🐝</div>
+              <div class="deck"></div>
+            </div>
+          </div>
+
+          <div class="cardsExt" id="cardExt8" data-id="7" data-attr="pig">
+            <div class="cardsInt" id="cardInt8">
+              <div class="face">🐷</div>
+              <div class="deck"></div>
+            </div>
+          </div>
+
+          <div class="cardsExt" id="cardExt9" data-id="0" data-attr="dog">
+            <div class="cardsInt" id="cardInt9">
+              <div class="face">🐶</div>
+              <div class="deck"></div>
+            </div>
+          </div>
+
+          <div class="cardsExt" id="cardExt10" data-id="1" data-attr="frog">
+            <div class="cardsInt" id="cardInt10">
+              <div class="face">🐸</div>
+              <div class="deck"></div>
+            </div>
+          </div>
+
+          <div class="cardsExt" id="cardExt11" data-id="2" data-attr="whale">
+            <div class="cardsInt" id="cardInt11">
+              <div class="face">🐳</div>
+              <div class="deck"></div>
+            </div>
+          </div>
+
+          <div class="cardsExt" id="cardExt12" data-id="3" data-attr="chicken">
+            <div class="cardsInt" id="cardInt12">
+              <div class="face">🐥</div>
+              <div class="deck"></div>
+            </div>
+          </div>
+
+          <div class="cardsExt" id="cardExt13" data-id="4" data-attr="elephant">
+            <div class="cardsInt" id="cardInt13">
+              <div class="face">🐘</div>
+              <div class="deck"></div>
+            </div>
+          </div>
+
+          <div class="cardsExt" id="cardExt14" data-id="5" data-attr="parrot">
+            <div class="cardsInt" id="cardInt14">
+              <div class="face">🦜</div>
+              <div class="deck"></div>
+            </div>
+          </div>
+
+          <div class="cardsExt" id="cardExt15" data-id="6" data-attr="bee">
+            <div class="cardsInt" id="cardInt15">
+              <div class="face">🐝</div>
+              <div class="deck"></div>
+            </div>
+          </div>
+
+          <div class="cardsExt" id="cardExt16" data-id="7" data-attr="pig">
+            <div class="cardsInt" id="cardInt16">
+              <div class="face">🐷</div>
+              <div class="deck"></div>
+            </div>
+          </div>
+
+        </div><!-- __fin du groupe de carte (mainGame-int) __  -->
+
+      </div><!-- __fin du plateau de jeu (mainGame-ext) __ -->
+
+      <div class="mainEnd">
+        <p class="score">Dernier score : </p>
+      </div>
+    </main>
+
+    <!-- ============ footer ============ -->
+
+    <footer>
+      <div class="headerContExt">
+        <div class="headerContInt">
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <!-- ************** body ************** -->
+</html>

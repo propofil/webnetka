@@ -1,0 +1,179 @@
+/*-----------------*/
+/*---           ---*/
+/*-----------------*/
+
+
+
+/*commentaire*/
+
+
+
+/* GENERAL */
+
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Mountains+of+Christmas:wght@400;700&family=Roboto:wght@100;300;400&display=swap" rel="stylesheet');
+
+/*
+    font-family: 'Luckiest Guy', cursive;
+
+    font-family: 'Mountains of Christmas', cursive;
+
+    font-family: 'Roboto', sans-serif;
+
+*/
+
+
+* {
+	box-sizing: border-box;
+  -webkit-user-select: none; 
+  -webkit-touch-callout: none; 
+  -moz-user-select: none; 
+  -ms-user-select: none; 
+  user-select: none; 
+}
+
+audio{
+  color:red;
+  background-color: blue;
+  height: 3vh;
+  width: 100%;
+}
+
+body {
+	color: #eee;
+	font-family: 'Muli', sans-serif;
+  width: 100%;
+	height: 100vh;
+	overflow: hidden;
+	margin: 0;
+  text-align: center;
+}
+
+.bg-image {
+  background: url('https://nsm09.casimages.com/img/2021/12/30//21123005294224071417729448.jpg') no-repeat center/cover;
+  /*  background: url('https://nsm09.casimages.com/img/2021/12/30//21123005294224071417729448.jpg') no-repeat center/cover;*/
+  filter: contrast(80%);
+  height: 100vh;
+  width: 100%;
+  /* position: relative; */
+}
+
+
+h1 {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+  /* background: rgba(0,0,0,0.15);
+  padding: 2rem 3rem; */
+  font-family: 'Mountains of Christmas', cursive;
+  font-size : 4vw;
+  /* background-image: linear-gradient(to bottom, white,yellow, orange, red, red); */
+  background-image: linear-gradient(to bottom,yellow, red);
+  -webkit-background-clip: text;
+  /*-moz-background-clip: text;*/
+  background-clip: text;
+  color: transparent;
+  text-shadow: -4px -2px 0px #fff;
+  cursor:crosshair;
+}
+
+
+h1:hover{
+  text-shadow: 4px 2px 1px #000;
+}
+
+.fa-snowflake {
+	color: rgb(160, 160, 160);
+	position: absolute;
+	top: -20px;
+  animation: fall linear forwards;
+}
+
+.fa-snowflake:hover {
+  cursor: crosshair ;
+  color:orange;
+  font-size: 40rem;
+}
+
+.fa-snowflake:active {
+  display:none;
+}
+
+
+@keyframes fall {
+  0%{transform: translate(0,0);}
+  20%{transform: translate(50px,22vh);}
+  40%{transform: translate(0px,44vh);}
+  60%{transform: translate(50px,66vh);}
+  80%{transform: translate(0px,88vh);}
+  100%{transform: translate(50px,110vh);}
+}
+
+
+@media all and (min-width:2500px) {/* 909w à 1400ww */
+  h1 {
+    font-size : 3vw;
+    top: 80%;
+  }
+}
+@media all and (max-width:1500px) {/* 909w à 1400ww */
+  h1 {
+    font-size : 5vw;
+  }
+}
+@media all and (max-width:1000px) {/* 909w à 1400ww */
+  h1 {
+    font-size : 6vw;
+  }
+}
+
+@media all and (max-width:700px) {/* 909w à 1400ww */
+  h1 {
+    font-size : 8vw;
+  }
+}
+@media all and (max-width:500px) {/* 909w à 1400ww */
+  h1 {
+    font-size : 10vw;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* inutilisé*/
+
+
+
+
+
+@keyframes fall0 {
+	to {
+		transform: translateY(105vh);
+	}
+}
+
+
+.agitation {
+  animation: agite 1000ms ease-in-out infinite;
+}
+@keyframes agite{
+  0%{transform:scale(1);}
+  45%{transform:scale(1.1);}
+  100%{transform:scale(1);}
+}
+
+.porte{
+  position: absolute;
+  width: 58px;
+  height: 70px;
+  background-color: red;
+  left: 517px;
+  top: 537px;
+}
