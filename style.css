@@ -1,0 +1,448 @@
+/*-----------------*/
+/*---           ---*/
+/*-----------------*/
+
+
+
+/*commentaire*/
+
+
+
+/* GENERAL */
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --Color1: #0061e0;
+  --Color1light: #3188ff;
+  --Color1dark: #003c90;
+  --Color1pale: #a9cdff;
+  --Color1blank: #ebf3ff;
+
+}
+
+
+
+.centerText {
+  text-align: center;
+}
+
+.d-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.d-flexc {
+  display: flex;
+  justify-content: center;
+}
+
+.d-flex-colc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.d-flex-cols {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.d-flex-rowc {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.d-flex-rows {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.buttonLang {
+  margin: 10px 30px;
+  text-decoration: none;
+  font-size: 30px;
+  filter: grayscale(0.5);
+  transition: ease-in-out 300ms;
+}
+
+.buttonLang:hover {
+  filter: none;
+  transform: scale(1.2);
+}
+
+.buttonChoice {
+  background-color: var(--Color1light);
+  display: inline-block;
+  margin: 10px 15px;
+  padding: 6px;
+  width: 100px;
+  border-radius: 5px;
+  font-size: 15px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: -1x 1px 2px 2px var(--Color1);
+  /* transform: scale(1.2);*/
+  filter: grayscale(0.5);
+  border: solid 1px var(--Color1);
+  box-shadow: 2px 2px var(--Color1);
+  transition: ease-in-out 300ms;
+}
+
+.buttonChoice:hover {
+  filter: none;
+  transform: scale(1.2);
+}
+
+.activeLang {
+  cursor: default;
+  transform: scale(1.2);
+  filter: none;
+}
+
+.activeChoice {
+  filter: none;
+  cursor: default;
+  box-shadow: inset 2px 2px var(--Color1pale);
+  border: solid 1px var(--Color1);
+  transform: scale(1.2);
+}
+
+
+
+/*
+h1{
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 0.8em;
+}
+
+h2{
+    font-size: 1.3rem;
+    font-weight: 700;
+    line-height: 0.8em;
+}
+
+h3{
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 0.8em;
+}
+
+h4{
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 0.8em;
+}
+
+
+p{
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 0.8em;
+	color:darkblue;
+}
+*/
+
+/* a{text-decoration: none;} */
+
+li {
+  list-style: none;
+}
+
+
+
+/* <!---------------------------- BODY ----------------------------> */
+
+body {
+  background-color: white;
+  color: black;
+  font-family: 'Raleway', sans-serif;
+  /* -webkit-font-smoothing: antialiased; */
+  /* -moz-osx-font-smoothing: grayscale; */
+  max-width: 1400px;
+  margin: 0 auto;
+  /* border: solid 1px red; */
+  /* box-shadow: 0px 0px 10px 1px red; */
+  /* word-break: break-word; */
+  /* cursor: pointer; */
+}
+
+section {
+  margin: 15px 10px;
+  padding: 25px 10px;
+  background-color: var(--Color1blank);
+  box-shadow: 0px 0px 5px 1px var(--Color1);
+  border-radius: 10px;
+}
+
+p {
+  margin-top: 10px;
+}
+
+h2 {
+  color: var(--Color1);
+}
+
+.mq2Image {
+  width: 100%;
+  min-width: 200px;
+  max-width: 1000px;
+  max-height: 1000px;
+  object-fit: contain;
+}
+
+.titreJeu {
+  font-weight: 700;
+  /* font-weight: bold; */
+  margin-top: 45px;
+  /* margin-bottom: 0px; */
+}
+
+.descriptionJeu {
+  margin-bottom: 7px;
+}
+
+.lienReduc {
+  margin-left: 30px;
+}
+
+footer {
+  margin: 10px;
+}
+
+/*<!------------------------------HEADER----------------> */
+
+/*<!--  logo (...)-->*/
+
+/*<!--  headernav (...)-->*/
+
+/*<!------------------------------MAIN----------------> */
+
+/*<!--  banner (...)-->*/
+
+/*<!--  section (...)-->*/
+
+/*<!--  article (...)-->*/
+
+/*<!--  aside  (...)-->*/
+
+
+/*<!------------------------------ FOOTER -------------------------------->*/
+
+
+
+/* __________________________________________*/
+/* _____________ animation _________________ */
+/* _________________________________________ */
+
+.messageRetour {
+  color: red;
+  color: var(--primaryColor3);
+  opacity: 55%;
+  animation: insiste 800ms ease 6;
+}
+
+@keyframes insiste {
+  0% {
+    opacity: 100%;
+    transform: scale(1.04);
+  }
+
+  25% {
+    opacity: 90%;
+    transform: scale(1.02);
+  }
+
+  50% {
+    opacity: 80%;
+    transform: scale(1);
+  }
+
+  75% {
+    opacity: 90%;
+    transform: scale(1.02);
+  }
+
+  100% {
+    opacity: 100%;
+    transform: scale(1.04);
+  }
+}
+
+/* _________________________________________________ */
+/* _____________ responsive - @media _______________ */
+/* _________________________________________________ */
+
+
+/*
+
+
+@media all and (max-width: 300px)
+
+// <300w//
+  {
+
+  a,
+  h2 {
+    font-size: 7vw;
+  }
+
+  h1 {
+    font-size: 8vw;
+  }
+
+  p {
+    font-size: 6vw;
+  }
+
+
+}
+
+@media all and (min-width: 300px) and (max-width: 400px)
+
+// 300-400w //
+  {
+
+  a,
+  h2 {
+    font-size: 6vw;
+  }
+
+  h1 {
+    font-size: 7vw;
+  }
+
+  p {
+    font-size: 5vw;
+  }
+}
+
+@media all and (min-width: 400px) and (max-width: 500px)
+
+// 400-500w //
+  {
+
+  a,
+  h2 {
+    font-size: 5vw;
+    color: darkviolet;
+  }
+
+  h1 {
+    font-size: 6vw;
+  }
+
+  p {
+    font-size: 4vw;
+  }
+}
+
+@media all and (min-width: 500px) and (max-width: 600px)
+
+// 500-600w //
+  {
+
+  a,
+  h2 {
+    font-size: 3.8vw;
+  }
+
+  h1 {
+    font-size: 4.8vw;
+  }
+
+  p {
+    font-size: 2.8vw;
+  }
+}
+
+
+@media all and (min-width: 600px) and (max-width: 900px)
+
+// entre 600 et 900px //
+  {
+
+  a,
+  h2 {
+    font-size: 3.5vw;
+  }
+
+  h1 {
+    font-size: 4.5vw;
+  }
+
+  p {
+    font-size: 2.5vw;
+  }
+}
+}
+
+@media all and (min-width: 900px) and (max-width: 1400px)
+
+// 900-1400w //
+  {
+
+  a,
+  h2 {
+    font-size: 3.2vw;
+  }
+
+  h1 {
+    font-size: 4.2vw;
+  }
+
+  p {
+    font-size: 2.2vw;
+  }
+}
+
+@media all and (min-width: 1400px) and (max-width: 2000px)
+
+// 1400-2000w //
+  {
+
+  a,
+  h2 {
+    font-size: 3vw;
+  }
+
+  h1 {
+    font-size: 4vw;
+  }
+
+  p {
+    font-size: 2vw;
+  }
+}
+
+@media all and (min-width: 2000px)
+
+// >2000w //
+  {
+
+  a,
+  h2 {
+    font-size: 2vw;
+  }
+
+  h1 {
+    font-size: 3vw;
+  }
+
+  p {
+    font-size: 1vw;
+  }
+}
+
+
+*/
